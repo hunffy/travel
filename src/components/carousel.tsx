@@ -1,8 +1,15 @@
 import styled from "styled-components";
-import { useState } from "react";
-
-const Carousel = () => {
-  return <CarouselContainer>움직여요움직여</CarouselContainer>;
+interface CarouselProps {
+  carouselList: string[];
+}
+const Carousel = ({ carouselList }: CarouselProps) => {
+  return (
+    <CarouselContainer>
+      {carouselList?.map((img, idx) => (
+        <img key={idx} src={img} alt={`${img}-${idx}`} />
+      ))}
+    </CarouselContainer>
+  );
 };
 
 export default Carousel;
