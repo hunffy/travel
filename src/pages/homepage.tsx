@@ -1,5 +1,17 @@
+import styled from "styled-components";
+import Carousel from "../components/carousel";
 const Homepage = () => {
-  return <div>홈페이지 시작</div>;
+  return (
+    <Container>
+      <p>메인페이지</p>
+      <Carousel />
+    </Container>
+  );
 };
 
 export default Homepage;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
